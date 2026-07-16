@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Dr. Luiz Roberto Craveiro Campos | Odontologia Estética em Brasília</title>
+<meta content="Atendimento odontológico em Brasília com foco em próteses dentárias, implantes, facetas de porcelana, lentes de contato dental, clareamento e reabilitação oral." name="description"/>
+<style>
+    :root{
+      --bg:#f6f3ed;
+      --surface:#ffffff;
+      --text:#1c2a29;
+      --muted:#65706e;
+      --accent:#846f55;
+      --accent-dark:#66523d;
+      --line:#ddd7cd;
+      --max:1180px;
+      --radius:26px;
+      --shadow:0 20px 55px rgba(38,47,45,.10);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button,a{transition:.2s ease}
+
+    .container{
+      width:min(calc(100% - 40px), var(--max));
+      margin-inline:auto;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(246,243,237,.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(221,215,205,.8);
+    }
+
+    .nav{
+      min-height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.1rem;
+      font-weight:700;
+      max-width:320px;
+      line-height:1.2;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      font-size:.96rem;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:0 24px;
+      border-radius:999px;
+      border:1px solid var(--accent);
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:var(--accent);
+      color:#fff;
+    }
+
+    .btn-primary:hover{background:var(--accent-dark)}
+    .btn-outline:hover{background:#eee8df}
+
+    .hero{
+      padding:72px 0 54px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      align-items:center;
+      gap:58px;
+    }
+
+    .eyebrow{
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.78rem;
+      font-weight:800;
+      color:var(--accent);
+      margin:0 0 16px;
+    }
+
+    h1,h2,h3{
+      font-family:Georgia, "Times New Roman", serif;
+      font-weight:500;
+      line-height:1.05;
+      margin-top:0;
+    }
+
+    h1{
+      font-size:clamp(3.3rem,7vw,6.8rem);
+      margin-bottom:24px;
+      letter-spacing:-.045em;
+    }
+
+    .hero p{
+      max-width:680px;
+      font-size:1.15rem;
+      color:var(--muted);
+      margin-bottom:30px;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .hero-media{
+      position:relative;
+    }
+
+    .hero-media img{
+      width:100%;
+      height:660px;
+      object-fit:cover;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .experience-card{
+      position:absolute;
+      left:-28px;
+      bottom:36px;
+      width:230px;
+      padding:24px;
+      border-radius:20px;
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .experience-card strong{
+      display:block;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:2rem;
+      color:var(--accent-dark);
+    }
+
+    section{
+      padding:86px 0;
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:32px;
+      margin-bottom:42px;
+    }
+
+    .section-head h2{
+      font-size:clamp(2.4rem,5vw,4.5rem);
+      max-width:800px;
+      margin-bottom:0;
+    }
+
+    .section-head p{
+      max-width:430px;
+      color:var(--muted);
+      margin:0;
+    }
+
+    .services{
+      background:var(--surface);
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .service-card{
+      overflow:hidden;
+      border-radius:22px;
+      background:var(--bg);
+      border:1px solid var(--line);
+    }
+
+    .service-card img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+    }
+
+    .service-card-content{
+      padding:27px;
+    }
+
+    .service-card h3{
+      font-size:1.7rem;
+      margin-bottom:14px;
+    }
+
+    .service-card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:70px;
+      align-items:start;
+    }
+
+    .about-label{
+      position:sticky;
+      top:120px;
+    }
+
+    .about h2{
+      font-size:clamp(2.7rem,5vw,5rem);
+      margin-bottom:30px;
+    }
+
+    .about p{
+      font-size:1.14rem;
+      color:var(--muted);
+      max-width:780px;
+    }
+
+    .contact{
+      padding-top:42px;
+    }
+
+    .contact-box{
+      background:var(--text);
+      color:#fff;
+      border-radius:30px;
+      padding:64px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:40px;
+    }
+
+    .contact-box h2{
+      font-size:clamp(2.7rem,5vw,5rem);
+      max-width:700px;
+      margin-bottom:20px;
+    }
+
+    .contact-box p{
+      color:rgba(255,255,255,.72);
+      max-width:680px;
+    }
+
+    .contact-box .btn-outline{
+      border-color:rgba(255,255,255,.55);
+      color:#fff;
+    }
+
+    footer{
+      padding:34px 0;
+      border-top:1px solid var(--line);
+      margin-top:80px;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:30px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:.94rem;
+    }
+
+    @media (max-width:900px){
+      .nav-links a:not(.btn){display:none}
+      .hero-grid,.about-grid{grid-template-columns:1fr}
+      .hero-media img{height:520px}
+      .experience-card{left:18px}
+      .service-grid{grid-template-columns:1fr}
+      .section-head{display:block}
+      .section-head p{margin-top:18px}
+      .contact-box{padding:42px;display:block}
+      .contact-box .actions{margin-top:28px}
+      .about-label{position:static}
+    }
+
+    @media (max-width:560px){
+      .container{width:min(calc(100% - 24px), var(--max))}
+      .brand{font-size:.92rem}
+      .nav .btn{padding:0 16px;min-height:44px}
+      .hero{padding-top:42px}
+      h1{font-size:3.6rem}
+      .hero-media img{height:430px}
+      section{padding:62px 0}
+      .contact-box{padding:30px 24px}
+    }
+  
+    .whatsapp-float{
+      position:fixed;
+      right:24px;
+      bottom:24px;
+      z-index:9999;
+      width:64px;
+      height:64px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:#25d366;
+      box-shadow:0 8px 24px rgba(0,0,0,.24);
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .whatsapp-float:hover{
+      transform:translateY(-2px) scale(1.04);
+      background:#20bd5a;
+      box-shadow:0 12px 30px rgba(0,0,0,.3);
+    }
+
+    .whatsapp-float:focus-visible{
+      outline:3px solid #ffffff;
+      outline-offset:3px;
+    }
+
+    .whatsapp-float svg{
+      width:36px;
+      height:36px;
+      fill:#ffffff;
+    }
+
+    @media (max-width:560px){
+      .whatsapp-float{
+        right:18px;
+        bottom:18px;
+        width:58px;
+        height:58px;
+      }
+
+      .whatsapp-float svg{
+        width:32px;
+        height:32px;
+      }
+    }
+
+  
+
+
+
+    .menu-toggle{
+      gap:10px;
+      border:0;
+      font-size:1rem;
+    }
+
+    .menu-icon{
+      width:22px;
+      display:grid;
+      gap:4px;
+    }
+
+    .menu-icon span{
+      display:block;
+      height:2px;
+      border-radius:999px;
+      background:currentColor;
+    }
+
+    .menu-overlay{
+      position:fixed;
+      inset:0;
+      z-index:10000;
+      background:rgba(18,26,25,.52);
+      opacity:0;
+      visibility:hidden;
+      transition:opacity .28s ease, visibility .28s ease;
+    }
+
+    .side-menu{
+      position:fixed;
+      top:0;
+      right:0;
+      z-index:10001;
+      width:min(86vw,390px);
+      height:100dvh;
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      background:var(--bg);
+      box-shadow:-18px 0 50px rgba(0,0,0,.18);
+      transform:translateX(105%);
+      transition:transform .32s ease;
+      overflow-y:auto;
+    }
+
+    body.menu-open{
+      overflow:hidden;
+    }
+
+    body.menu-open .menu-overlay{
+      opacity:1;
+      visibility:visible;
+    }
+
+    body.menu-open .side-menu{
+      transform:translateX(0);
+    }
+
+    .side-menu-header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:20px;
+      padding-bottom:24px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .side-menu-title{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.35rem;
+      line-height:1.2;
+      font-weight:700;
+    }
+
+    .menu-close{
+      width:46px;
+      height:46px;
+      flex:0 0 46px;
+      border:1px solid var(--line);
+      border-radius:50%;
+      background:var(--surface);
+      color:var(--text);
+      font-size:1.8rem;
+      line-height:1;
+      cursor:pointer;
+    }
+
+    .side-menu-links{
+      display:grid;
+      margin-top:34px;
+    }
+
+    .side-menu-links a{
+      padding:18px 4px;
+      border-bottom:1px solid var(--line);
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.65rem;
+      line-height:1.15;
+    }
+
+    .side-menu-links a:hover{
+      color:var(--accent-dark);
+      padding-left:8px;
+    }
+
+    .side-menu-contact{
+      margin-top:auto;
+      padding-top:32px;
+    }
+
+    .side-menu-contact .btn{
+      width:100%;
+    }
+
+    @media (max-width:560px){
+      .menu-toggle{
+        min-width:122px;
+      }
+
+      .side-menu{
+        width:88vw;
+        padding:24px;
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      .menu-overlay,
+      .side-menu{
+        transition:none;
+      }
+    }
+
+
+    .faq-section{
+      background:var(--surface);
+    }
+
+    .faq-heading{
+      max-width:790px;
+      margin-bottom:46px;
+    }
+
+    .faq-heading h2{
+      font-size:clamp(2.7rem,5vw,4.8rem);
+      margin-bottom:20px;
+    }
+
+    .faq-heading > p:last-child{
+      color:var(--muted);
+      font-size:1.08rem;
+      max-width:700px;
+    }
+
+    .faq-groups{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:26px;
+    }
+
+    .faq-group{
+      padding:30px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:var(--bg);
+    }
+
+    .faq-group h3{
+      font-size:1.85rem;
+      margin-bottom:20px;
+      color:var(--accent-dark);
+    }
+
+    .faq-item{
+      border-top:1px solid var(--line);
+    }
+
+    .faq-item:last-child{
+      border-bottom:1px solid var(--line);
+    }
+
+    .faq-item summary{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:19px 0;
+      cursor:pointer;
+      list-style:none;
+      font-weight:750;
+      line-height:1.35;
+    }
+
+    .faq-item summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .faq-icon{
+      position:relative;
+      width:26px;
+      height:26px;
+      flex:0 0 26px;
+      border-radius:50%;
+      border:1px solid var(--accent);
+    }
+
+    .faq-icon::before,
+    .faq-icon::after{
+      content:"";
+      position:absolute;
+      top:50%;
+      left:50%;
+      width:11px;
+      height:1.5px;
+      border-radius:999px;
+      background:var(--accent-dark);
+      transform:translate(-50%,-50%);
+      transition:transform .2s ease;
+    }
+
+    .faq-icon::after{
+      transform:translate(-50%,-50%) rotate(90deg);
+    }
+
+    .faq-item[open] .faq-icon::after{
+      transform:translate(-50%,-50%) rotate(0deg);
+    }
+
+    .faq-item[open] summary{
+      color:var(--accent-dark);
+    }
+
+    .faq-answer{
+      padding:0 44px 20px 0;
+      color:var(--muted);
+    }
+
+    .faq-answer p{
+      margin:0;
+    }
+
+    .faq-cta{
+      margin-top:34px;
+      padding:34px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      border-radius:24px;
+      background:var(--text);
+      color:#fff;
+    }
+
+    .faq-cta h3{
+      font-size:2rem;
+      margin-bottom:10px;
+    }
+
+    .faq-cta p{
+      margin:0;
+      color:rgba(255,255,255,.72);
+    }
+
+    .faq-cta .eyebrow{
+      color:#d4c3aa;
+      margin-bottom:8px;
+    }
+
+    .faq-cta .btn{
+      flex:0 0 auto;
+    }
+
+    @media (max-width:900px){
+      .faq-groups{
+        grid-template-columns:1fr;
+      }
+
+      .faq-cta{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+    }
+
+    @media (max-width:560px){
+      .faq-group{
+        padding:24px 20px;
+      }
+
+      .faq-group h3{
+        font-size:1.55rem;
+      }
+
+      .faq-item summary{
+        padding:17px 0;
+      }
+
+      .faq-answer{
+        padding-right:12px;
+      }
+
+      .faq-cta{
+        padding:28px 24px;
+      }
+
+      .faq-cta .btn{
+        width:100%;
+      }
+    }
+
+
+    .location-section{
+      background:var(--bg);
+    }
+
+    .location-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:54px;
+      align-items:stretch;
+    }
+
+    .location-content h2{
+      font-size:clamp(2.7rem,5vw,4.8rem);
+      margin-bottom:24px;
+    }
+
+    .location-intro{
+      max-width:650px;
+      margin-bottom:30px;
+      color:var(--muted);
+      font-size:1.08rem;
+    }
+
+    .address-card{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      padding:24px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:var(--surface);
+      box-shadow:0 12px 34px rgba(38,47,45,.06);
+    }
+
+    .address-icon{
+      width:48px;
+      height:48px;
+      flex:0 0 48px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:var(--accent);
+    }
+
+    .address-icon svg{
+      width:25px;
+      height:25px;
+      fill:#fff;
+    }
+
+    .address-card address{
+      display:grid;
+      gap:3px;
+      font-style:normal;
+      color:var(--muted);
+    }
+
+    .address-card address strong{
+      margin-bottom:4px;
+      color:var(--text);
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.25rem;
+    }
+
+    .location-actions{
+      margin-top:26px;
+    }
+
+    .location-map{
+      min-height:540px;
+      overflow:hidden;
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      background:var(--surface);
+    }
+
+    .location-map iframe{
+      width:100%;
+      height:100%;
+      min-height:540px;
+      border:0;
+      display:block;
+    }
+
+    @media (max-width:900px){
+      .location-grid{
+        grid-template-columns:1fr;
+      }
+
+      .location-map,
+      .location-map iframe{
+        min-height:430px;
+      }
+    }
+
+    @media (max-width:560px){
+
+      .location-map,
+      .location-map iframe{
+        min-height:360px;
+      }
+
+      .location-actions .btn{
+        width:100%;
+      }
+    }
+
+
+    .opening-hours-card{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      margin-top:16px;
+      padding:22px 24px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:var(--surface);
+    }
+
+    .opening-hours-icon{
+      width:48px;
+      height:48px;
+      flex:0 0 48px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:var(--accent);
+    }
+
+    .opening-hours-icon svg{
+      width:25px;
+      height:25px;
+      fill:#fff;
+    }
+
+    .opening-hours-card > div:last-child{
+      display:grid;
+      gap:3px;
+      color:var(--muted);
+    }
+
+    .opening-hours-card strong{
+      margin-bottom:4px;
+      color:var(--text);
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.2rem;
+    }
+</style>
+<link href="https://drluizrobertocampos.com.br/" rel="canonical"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="Dr. Luiz Roberto Craveiro Campos" name="author"/><meta content="#846f55" name="theme-color"/><meta content="pt_BR" property="og:locale"/><meta content="website" property="og:type"/><meta content="Dr. Luiz Roberto Craveiro Campos" property="og:site_name"/><meta content="Dr. Luiz Roberto Craveiro Campos | Odontologia Estética em Brasília" property="og:title"/><meta content="Atendimento odontológico em Brasília com foco em próteses dentárias, implantes, facetas de porcelana, lentes de contato dental, clareamento e reabilitação oral." property="og:description"/><meta content="https://drluizrobertocampos.com.br/" property="og:url"/><meta content="https://smile-artist-portal.lovable.app/assets/hero-clinic-BvfuUjxm.jpg" property="og:image"/><meta content="Consultório odontológico do Dr. Luiz Roberto Craveiro Campos em Brasília" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Dr. Luiz Roberto Craveiro Campos | Odontologia Estética em Brasília" name="twitter:title"/><meta content="Atendimento odontológico em Brasília com foco em próteses dentárias, implantes, facetas de porcelana, lentes de contato dental, clareamento e reabilitação oral." name="twitter:description"/><meta content="https://smile-artist-portal.lovable.app/assets/hero-clinic-BvfuUjxm.jpg" name="twitter:image"/><link as="image" href="https://smile-artist-portal.lovable.app/assets/hero-clinic-BvfuUjxm.jpg" rel="preload"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://drluizrobertocampos.com.br/#website",
+      "url": "https://drluizrobertocampos.com.br/",
+      "name": "Dr. Luiz Roberto Craveiro Campos",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://drluizrobertocampos.com.br/#dentist"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://drluizrobertocampos.com.br/#webpage",
+      "url": "https://drluizrobertocampos.com.br/",
+      "name": "Dr. Luiz Roberto Craveiro Campos | Odontologia Estética em Brasília",
+      "description": "Atendimento odontológico em Brasília com foco em próteses dentárias, implantes, facetas de porcelana, lentes de contato dental, clareamento e reabilitação oral.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://drluizrobertocampos.com.br/#website"
+      },
+      "about": {
+        "@id": "https://drluizrobertocampos.com.br/#dentist"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://smile-artist-portal.lovable.app/assets/hero-clinic-BvfuUjxm.jpg"
+      }
+    },
+    {
+      "@type": "Dentist",
+      "@id": "https://drluizrobertocampos.com.br/#dentist",
+      "name": "Dr. Luiz Roberto Craveiro Campos",
+      "url": "https://drluizrobertocampos.com.br/",
+      "image": "https://smile-artist-portal.lovable.app/assets/hero-clinic-BvfuUjxm.jpg",
+      "telephone": "+5561991755549",
+      "priceRange": "$$",
+      "description": "Atendimento odontológico em Brasília com foco em próteses dentárias, implantes, facetas de porcelana, lentes de contato dental, clareamento e reabilitação oral.",
+      "medicalSpecialty": [
+        "Prótese dentária",
+        "Implantes dentários",
+        "Facetas de porcelana",
+        "Lentes de contato dental",
+        "Clareamento dental",
+        "Reabilitação oral"
+      ],
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Distrito Federal"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Setor de Rádio e Televisão Sul, Quadra 701, Conjunto D, Lote 5, Salas 605/607",
+        "addressLocality": "Brasília",
+        "addressRegion": "DF",
+        "postalCode": "70340-907",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday"
+          ],
+          "opens": "09:00",
+          "closes": "12:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday"
+          ],
+          "opens": "14:00",
+          "closes": "18:00"
+        }
+      ],
+      "founder": {
+        "@id": "https://drluizrobertocampos.com.br/#person"
+      },
+      "employee": {
+        "@id": "https://drluizrobertocampos.com.br/#person"
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "Person",
+      "@id": "https://drluizrobertocampos.com.br/#person",
+      "name": "Dr. Luiz Roberto Craveiro Campos",
+      "jobTitle": "Cirurgião-dentista",
+      "url": "https://drluizrobertocampos.com.br/",
+      "telephone": "+5561991755549",
+      "worksFor": {
+        "@id": "https://drluizrobertocampos.com.br/#dentist"
+      },
+      "knowsAbout": [
+        "Prótese dentária",
+        "Implantes dentários",
+        "Facetas de porcelana",
+        "Lentes de contato dental",
+        "Clareamento dental",
+        "Reabilitação oral"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://drluizrobertocampos.com.br/#faq",
+      "url": "https://drluizrobertocampos.com.br/#faq",
+      "inLanguage": "pt-BR",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é uma prótese dentária?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A prótese dentária é um tratamento utilizado para substituir um ou mais dentes perdidos ou restaurar dentes comprometidos, devolvendo função mastigatória, estética e qualidade de vida."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais são os principais tipos de próteses dentárias?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Existem próteses fixas, removíveis e próteses sobre implantes. A indicação depende das condições bucais e das necessidades de cada paciente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quando a prótese dentária é indicada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pode ser indicada em casos de perda dentária, dentes muito comprometidos ou necessidade de recuperar a mastigação, a fala e a harmonia do sorriso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A prótese dentária fica com aparência natural?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Os materiais atuais permitem reproduzir cor, forma e textura de modo bastante semelhante aos dentes naturais."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como cuidar corretamente da prótese dentária?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A higiene diária, as consultas periódicas e o uso adequado da prótese ajudam a preservar o tratamento e a saúde bucal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é um implante dentário?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É uma estrutura de titânio instalada no osso para substituir a raiz de um dente perdido e servir de suporte para uma prótese."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quem pode realizar um implante dentário?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Muitas pessoas podem receber implantes, desde que tenham condições clínicas adequadas. A indicação depende de avaliação individualizada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O implante dentário é seguro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. É um tratamento consolidado na odontologia, com bons resultados quando realizado com planejamento, técnica adequada e acompanhamento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais são as vantagens do implante dentário?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Entre as vantagens estão estabilidade, conforto, segurança ao mastigar, preservação óssea e aparência natural."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como cuidar do implante após o tratamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O implante exige boa higiene bucal, acompanhamento periódico e cuidados semelhantes aos recomendados para os dentes naturais."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que são facetas de porcelana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "São lâminas confeccionadas sob medida para recobrir a parte frontal dos dentes e melhorar forma, cor e harmonia do sorriso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é a diferença entre facetas e lentes de contato dental?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As lentes costumam ser mais finas e indicadas para pequenas correções. As facetas podem atender situações que exigem mudanças mais significativas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "As facetas alteram a estrutura dos dentes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cada caso é avaliado individualmente. Quando necessário, o preparo é realizado de forma conservadora, buscando preservar a estrutura dental."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quem pode utilizar facetas de porcelana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pacientes com indicação clínica e desejo de melhorar a estética do sorriso podem se beneficiar do tratamento após avaliação profissional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como manter as facetas bonitas por mais tempo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Boa higiene, consultas periódicas e cuidados com hábitos que possam causar desgaste ajudam a preservar o tratamento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que são lentes de contato dental?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "São lâminas ultrafinas de porcelana utilizadas para corrigir pequenas imperfeições e tornar o sorriso mais harmonioso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Em quais situações as lentes são indicadas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Podem ser indicadas para pequenas alterações de cor, formato, tamanho, espaçamento e outras imperfeições estéticas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "As lentes deixam o sorriso com aparência natural?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Quando planejadas de acordo com o rosto e a anatomia dental, podem proporcionar resultado delicado e natural."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "As lentes de contato dental exigem cuidados especiais?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Os cuidados são semelhantes aos indicados para os dentes naturais, com boa higiene e acompanhamento odontológico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais hábitos ajudam a preservar as lentes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Manter boa higiene, evitar usar os dentes para abrir objetos e seguir as orientações profissionais ajudam a conservar o tratamento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o clareamento dental?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O clareamento utiliza agentes específicos que atuam sobre pigmentos responsáveis pelo escurecimento dos dentes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O clareamento dental é seguro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Quando realizado com indicação e acompanhamento profissional, é um procedimento seguro e eficaz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O clareamento pode causar sensibilidade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Algumas pessoas podem apresentar sensibilidade temporária, que pode ser controlada com orientação e protocolos adequados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é a diferença entre as técnicas de clareamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No consultório, a aplicação é realizada pelo profissional. No tratamento domiciliar supervisionado, o paciente utiliza moldeiras e produtos indicados pelo dentista."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais cuidados ajudam a manter o resultado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Boa higiene, consultas preventivas e hábitos saudáveis ajudam a preservar a aparência do sorriso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é reabilitação oral?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É um conjunto de tratamentos planejados para recuperar função, estética e saúde bucal de forma integrada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quem pode se beneficiar da reabilitação oral?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pessoas com perda dentária, desgaste, alterações na mordida ou necessidade de reconstrução do sorriso podem se beneficiar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais tratamentos podem fazer parte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Implantes, próteses, restaurações, facetas, clareamento e outros procedimentos podem ser combinados conforme a necessidade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como é realizado o planejamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O planejamento considera avaliação clínica, exames, registros fotográficos e as expectativas do paciente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais são os benefícios da reabilitação oral?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A reabilitação pode melhorar mastigação, conforto, função, estética e confiança ao sorrir."
+          }
+        }
+      ]
+    }
+  ]
+}</script></head>
+<body>
+<header>
+<div class="container nav">
+<a class="brand" href="#inicio">Dr. Luiz Roberto Craveiro Campos</a>
+<nav aria-label="Navegação principal" class="nav-links">
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu" class="btn btn-primary menu-toggle" type="button">
+<span aria-hidden="true" class="menu-icon">
+<span></span><span></span><span></span>
+</span>
+<span>Menu</span>
+</button>
+</nav>
+</div>
+</header>
+<main>
+<section class="hero" id="inicio">
+<div class="container hero-grid">
+<div>
+<p class="eyebrow">Excelência em saúde bucal</p>
+<h1>A arte de restaurar sorrisos.</h1>
+<p>
+            Dr. Luiz Roberto Craveiro Campos oferece próteses, restaurações estéticas
+            e reabilitação oral com tecnologia de ponta e cuidado humanizado.
+          </p>
+<div class="actions">
+<a class="btn btn-primary" href="#servicos">Conhecer tratamentos</a>
+<a class="btn btn-outline" href="#sobre">Sobre o doutor</a>
+</div>
+</div>
+<div class="hero-media">
+<img alt="Ambiente clínico moderno do Dr. Luiz Roberto Craveiro Campos" src="https://smile-artist-portal.lovable.app/assets/hero-clinic-BvfuUjxm.jpg"/>
+<div class="experience-card">
+<strong>+20 anos</strong>
+<span>De experiência dedicada à estética e funcionalidade oral</span>
+</div>
+</div>
+</div>
+</section>
+<section class="services" id="servicos">
+<div class="container">
+<div class="section-head">
+<h2>Especialidades focadas em longevidade e estética</h2>
+<div>
+<p>
+              Materiais de última geração para garantir que sua restauração
+              ou prótese seja imperceptível e duradoura.
+            </p>
+<p style="margin-top:20px">
+<a class="btn btn-outline" href="#contato">Falar com o doutor</a>
+</p>
+</div>
+</div>
+<div class="service-grid">
+<article class="service-card">
+<img alt="Coroa em porcelana para prótese dentária" src="protese_coroa.jpg"/>
+<div class="service-card-content">
+<h3>Próteses e Coroas</h3>
+<p>
+                Substituição de elementos ausentes com cerâmicas puras que
+                mimetizam a cor e a textura dos dentes naturais.
+              </p>
+</div>
+</article>
+<article class="service-card">
+<img alt="Restaurações estéticas de precisão" src="https://smile-artist-portal.lovable.app/assets/service-restoration-CN7563Qy.jpg"/>
+<div class="service-card-content">
+<h3>Restaurações Estéticas</h3>
+<p>
+                Remoção de cáries e trocas de amálgama por resinas premium
+                de alta resistência e polimento superior.
+              </p>
+</div>
+</article>
+<article class="service-card">
+<img alt="Lentes de contato dentais em porcelana" src="https://smile-artist-portal.lovable.app/assets/service-veneers-v1lhgjk4.jpg"/>
+<div class="service-card-content">
+<h3>Lentes e Facetas</h3>
+<p>
+                Transformação do sorriso com lâminas ultrafinas de porcelana
+                para correção de forma e cor.
+              </p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="about" id="sobre">
+<div class="container about-grid">
+<div class="about-label">
+<p class="eyebrow">O profissional</p>
+</div>
+<div>
+<h2>Dr. Luiz Roberto Craveiro Campos</h2>
+<p>
+            Cirurgião-dentista dedicado à reabilitação oral e à odontologia
+            estética, unindo técnica precisa e um atendimento acolhedor para
+            devolver aos pacientes um sorriso saudável e natural.
+          </p>
+<p>
+            Cada tratamento é planejado individualmente, respeitando a anatomia,
+            o tempo e o conforto de quem confia seu sorriso ao consultório.
+          </p>
+</div>
+</div>
+</section>
+<section class="faq-section" id="faq">
+<div class="container">
+<div class="faq-heading">
+<p class="eyebrow">Dúvidas frequentes</p>
+<h2>Perguntas Frequentes</h2>
+<p>
+        Encontre respostas para as principais dúvidas sobre próteses, implantes,
+        facetas, lentes de contato dental, clareamento e reabilitação oral.
+      </p>
+</div>
+<div class="faq-groups">
+<section aria-labelledby="faq-protese" class="faq-group">
+<h3 id="faq-protese">Prótese dentária</h3>
+<details class="faq-item">
+<summary>
+<span>O que é uma prótese dentária?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              A prótese dentária é um tratamento utilizado para substituir um ou
+              mais dentes perdidos ou restaurar dentes comprometidos, devolvendo
+              função mastigatória, estética e qualidade de vida.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Quais são os principais tipos de próteses dentárias?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Existem próteses fixas, removíveis e próteses sobre implantes.
+              A indicação depende das condições bucais e das necessidades de cada paciente.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Quando a prótese dentária é indicada?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Pode ser indicada em casos de perda dentária, dentes muito comprometidos
+              ou necessidade de recuperar a mastigação, a fala e a harmonia do sorriso.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>A prótese dentária fica com aparência natural?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Sim. Os materiais atuais permitem reproduzir cor, forma e textura de modo
+              bastante semelhante aos dentes naturais.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Como cuidar corretamente da prótese dentária?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              A higiene diária, as consultas periódicas e o uso adequado da prótese
+              ajudam a preservar o tratamento e a saúde bucal.
+            </p>
+</div>
+</details>
+</section>
+<section aria-labelledby="faq-implantes" class="faq-group">
+<h3 id="faq-implantes">Implantes dentários</h3>
+<details class="faq-item">
+<summary>
+<span>O que é um implante dentário?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              É uma estrutura de titânio instalada no osso para substituir a raiz
+              de um dente perdido e servir de suporte para uma prótese.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Quem pode realizar um implante dentário?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Muitas pessoas podem receber implantes, desde que tenham condições
+              clínicas adequadas. A indicação depende de avaliação individualizada.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>O implante dentário é seguro?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Sim. É um tratamento consolidado na odontologia, com bons resultados
+              quando realizado com planejamento, técnica adequada e acompanhamento.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Quais são as vantagens do implante dentário?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Entre as vantagens estão estabilidade, conforto, segurança ao mastigar,
+              preservação óssea e aparência natural.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Como cuidar do implante após o tratamento?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              O implante exige boa higiene bucal, acompanhamento periódico e cuidados
+              semelhantes aos recomendados para os dentes naturais.
+            </p>
+</div>
+</details>
+</section>
+<section aria-labelledby="faq-facetas" class="faq-group">
+<h3 id="faq-facetas">Facetas de porcelana</h3>
+<details class="faq-item">
+<summary>
+<span>O que são facetas de porcelana?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              São lâminas confeccionadas sob medida para recobrir a parte frontal
+              dos dentes e melhorar forma, cor e harmonia do sorriso.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Qual é a diferença entre facetas e lentes de contato dental?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              As lentes costumam ser mais finas e indicadas para pequenas correções.
+              As facetas podem atender situações que exigem mudanças mais significativas.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>As facetas alteram a estrutura dos dentes?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Cada caso é avaliado individualmente. Quando necessário, o preparo é
+              realizado de forma conservadora, buscando preservar a estrutura dental.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Quem pode utilizar facetas de porcelana?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Pacientes com indicação clínica e desejo de melhorar a estética do sorriso
+              podem se beneficiar do tratamento após avaliação profissional.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Como manter as facetas bonitas por mais tempo?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Boa higiene, consultas periódicas e cuidados com hábitos que possam causar
+              desgaste ajudam a preservar o tratamento.
+            </p>
+</div>
+</details>
+</section>
+<section aria-labelledby="faq-lentes" class="faq-group">
+<h3 id="faq-lentes">Lentes de contato dental</h3>
+<details class="faq-item">
+<summary>
+<span>O que são lentes de contato dental?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              São lâminas ultrafinas de porcelana utilizadas para corrigir pequenas
+              imperfeições e tornar o sorriso mais harmonioso.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Em quais situações as lentes são indicadas?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Podem ser indicadas para pequenas alterações de cor, formato, tamanho,
+              espaçamento e outras imperfeições estéticas.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>As lentes deixam o sorriso com aparência natural?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Sim. Quando planejadas de acordo com o rosto e a anatomia dental,
+              podem proporcionar resultado delicado e natural.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>As lentes de contato dental exigem cuidados especiais?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Os cuidados são semelhantes aos indicados para os dentes naturais,
+              com boa higiene e acompanhamento odontológico.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Quais hábitos ajudam a preservar as lentes?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Manter boa higiene, evitar usar os dentes para abrir objetos e seguir
+              as orientações profissionais ajudam a conservar o tratamento.
+            </p>
+</div>
+</details>
+</section>
+<section aria-labelledby="faq-clareamento" class="faq-group">
+<h3 id="faq-clareamento">Clareamento dental</h3>
+<details class="faq-item">
+<summary>
+<span>Como funciona o clareamento dental?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              O clareamento utiliza agentes específicos que atuam sobre pigmentos
+              responsáveis pelo escurecimento dos dentes.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>O clareamento dental é seguro?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Sim. Quando realizado com indicação e acompanhamento profissional,
+              é um procedimento seguro e eficaz.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>O clareamento pode causar sensibilidade?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Algumas pessoas podem apresentar sensibilidade temporária, que pode
+              ser controlada com orientação e protocolos adequados.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Qual é a diferença entre as técnicas de clareamento?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              No consultório, a aplicação é realizada pelo profissional. No tratamento
+              domiciliar supervisionado, o paciente utiliza moldeiras e produtos indicados pelo dentista.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Quais cuidados ajudam a manter o resultado?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Boa higiene, consultas preventivas e hábitos saudáveis ajudam a preservar
+              a aparência do sorriso.
+            </p>
+</div>
+</details>
+</section>
+<section aria-labelledby="faq-reabilitacao" class="faq-group">
+<h3 id="faq-reabilitacao">Reabilitação oral</h3>
+<details class="faq-item">
+<summary>
+<span>O que é reabilitação oral?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              É um conjunto de tratamentos planejados para recuperar função, estética
+              e saúde bucal de forma integrada.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Quem pode se beneficiar da reabilitação oral?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Pessoas com perda dentária, desgaste, alterações na mordida ou necessidade
+              de reconstrução do sorriso podem se beneficiar.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Quais tratamentos podem fazer parte?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              Implantes, próteses, restaurações, facetas, clareamento e outros procedimentos
+              podem ser combinados conforme a necessidade.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Como é realizado o planejamento?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              O planejamento considera avaliação clínica, exames, registros fotográficos
+              e as expectativas do paciente.
+            </p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+<span>Quais são os benefícios da reabilitação oral?</span>
+<span aria-hidden="true" class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+              A reabilitação pode melhorar mastigação, conforto, função, estética
+              e confiança ao sorrir.
+            </p>
+</div>
+</details>
+</section>
+</div>
+<div class="faq-cta">
+<div>
+<p class="eyebrow">Atendimento personalizado</p>
+<h3>Ainda tem alguma dúvida?</h3>
+<p>Converse diretamente pelo WhatsApp e agende uma avaliação.</p>
+</div>
+<a class="btn btn-primary" href="https://wa.me/5561991755549?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação%20com%20o%20Dr%2E%20Luiz%20Roberto%2E" rel="noopener" target="_blank">
+        Falar pelo WhatsApp
+      </a>
+</div>
+</div>
+</section>
+<section class="location-section" id="localizacao">
+<div class="container">
+<div class="location-grid">
+<div class="location-content">
+<p class="eyebrow">Localização</p>
+<h2>Atendimento no centro de Brasília</h2>
+<p class="location-intro">
+          O consultório está localizado no Centro Empresarial Brasília,
+          em uma área central e de fácil acesso no Distrito Federal.
+        </p>
+<div class="address-card">
+<div aria-hidden="true" class="address-icon">
+<svg focusable="false" viewbox="0 0 24 24">
+<path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 10.1A3.1 3.1 0 1 1 12 5.9a3.1 3.1 0 0 1 0 6.2Z"></path>
+</svg>
+</div>
+<address><strong>Centro Empresarial Brasília</strong><span>Setor de Rádio e Televisão Sul</span><span>Quadra 701, Conjunto D, Lote 5</span><span>Salas 605/607</span><span>Brasília, DF, CEP 70340-907</span></address>
+</div><div class="opening-hours-card">
+<div aria-hidden="true" class="opening-hours-icon">
+<svg focusable="false" viewbox="0 0 24 24">
+<path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2Zm1 10.41V6h-2v7.24l4.38 2.63 1.03-1.71Z"></path>
+</svg>
+</div>
+<div>
+<strong>Horário de atendimento</strong>
+<span>Segunda a sexta-feira</span>
+<span>09:00 às 12:00 e 14:00 às 18:00</span>
+</div>
+</div>
+<div class="actions location-actions">
+<a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Centro+Empresarial+Bras%C3%ADlia%2C+Setor+de+R%C3%A1dio+e+Televis%C3%A3o+Sul%2C+Q+701%2C+Conjunto+D%2C+Lote+5%2C+Bras%C3%ADlia%2C+DF%2C+70340-907" rel="noopener" target="_blank">
+            Como chegar
+          </a>
+</div>
+</div>
+<div class="location-map">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Centro+Empresarial+Bras%C3%ADlia%2C+Setor+de+R%C3%A1dio+e+Televis%C3%A3o+Sul%2C+Q+701%2C+Conjunto+D%2C+Lote+5%2C+Bras%C3%ADlia%2C+DF%2C+70340-907&amp;output=embed" title="Mapa do Centro Empresarial Brasília"></iframe>
+</div>
+</div>
+</div>
+</section>
+<section class="contact" id="contato">
+<div class="container">
+<div class="contact-box">
+<div>
+<h2>Pronto para renovar seu sorriso?</h2>
+<p>
+              Agende uma avaliação diagnóstica com o Dr. Luiz Roberto e descubra
+              o melhor plano de tratamento para você.
+            </p>
+</div>
+<div class="actions">
+<a class="btn btn-primary" href="https://wa.me/5561991755549?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação%20com%20o%20Dr%2E%20Luiz%20Roberto%2E" rel="noopener" target="_blank">
+              Agendar via WhatsApp
+            </a>
+<a class="btn btn-outline" href="tel:+5561991755549">
+              Ligar para o consultório
+            </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-inner">
+<div>
+<strong>Dr. Luiz Roberto Craveiro Campos</strong><br/>
+        © 2026 Todos os direitos reservados.
+      </div>
+<div>
+<a href="#" rel="noopener" target="_blank">Instagram</a>
+          |  
+        <a href="#contato">Contato</a>
+</div>
+</div>
+</footer>
+<div aria-hidden="true" class="menu-overlay" id="menu-overlay"></div>
+<aside aria-hidden="true" aria-label="Menu principal" class="side-menu" id="mobile-menu">
+<div class="side-menu-header">
+<div class="side-menu-title">Dr. Luiz Roberto<br/>Craveiro Campos</div>
+<button aria-label="Fechar menu" class="menu-close" type="button">×</button>
+</div>
+<nav aria-label="Links do menu" class="side-menu-links">
+<a href="#inicio">Início</a>
+<a href="#sobre">O Doutor</a>
+<a href="#faq">Perguntas Frequentes</a>
+<a href="#localizacao">Localização</a>
+<a href="#contato">Contato</a>
+</nav>
+<div class="side-menu-contact">
+<a class="btn btn-primary" href="https://wa.me/5561991755549?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação%20com%20o%20Dr%2E%20Luiz%20Roberto%2E" rel="noopener" target="_blank">
+      Agendar pelo WhatsApp
+    </a>
+</div>
+</aside>
+<a aria-label="Falar pelo WhatsApp" class="whatsapp-float" href="https://wa.me/5561991755549?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação%20com%20o%20Dr%2E%20Luiz%20Roberto%2E" rel="noopener" target="_blank" title="Falar pelo WhatsApp">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 32 32">
+<path d="M19.11 17.21c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.26s.97 2.62 1.11 2.8c.14.18 1.91 2.91 4.62 4.08.65.28 1.15.45 1.55.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.29.23-.63.23-1.17.16-1.29-.07-.11-.25-.18-.52-.32z"></path>
+<path d="M16.04 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.59 4.46 1.72 6.39L3.2 28.8l6.57-1.72A12.75 12.75 0 0 0 16.04 28.8c7.06 0 12.8-5.74 12.8-12.8s-5.74-12.8-12.8-12.8zm0 23.27c-2.04 0-4.03-.55-5.76-1.59l-.41-.24-3.9 1.02 1.04-3.8-.27-.42A10.4 10.4 0 0 1 5.57 16c0-5.77 4.7-10.47 10.47-10.47S26.51 10.23 26.51 16s-4.7 10.47-10.47 10.47z"></path>
+</svg>
+</a>
+<script>
+  (() => {
+    const body = document.body;
+    const openButton = document.querySelector(".menu-toggle");
+    const closeButton = document.querySelector(".menu-close");
+    const menu = document.getElementById("mobile-menu");
+    const overlay = document.getElementById("menu-overlay");
+    const links = menu.querySelectorAll("a[href^='#']");
+
+    const openMenu = () => {
+      body.classList.add("menu-open");
+      openButton.setAttribute("aria-expanded", "true");
+      menu.setAttribute("aria-hidden", "false");
+      overlay.setAttribute("aria-hidden", "false");
+      closeButton.focus();
+    };
+
+    const closeMenu = () => {
+      body.classList.remove("menu-open");
+      openButton.setAttribute("aria-expanded", "false");
+      menu.setAttribute("aria-hidden", "true");
+      overlay.setAttribute("aria-hidden", "true");
+      openButton.focus();
+    };
+
+    openButton.addEventListener("click", openMenu);
+    closeButton.addEventListener("click", closeMenu);
+    overlay.addEventListener("click", closeMenu);
+    links.forEach(link => link.addEventListener("click", closeMenu));
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && body.classList.contains("menu-open")) {
+        closeMenu();
+      }
+    });
+  })();
+</script>
+<script>
+  (() => {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      item.addEventListener("toggle", () => {
+        if (!item.open) return;
+
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.removeAttribute("open");
+          }
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
