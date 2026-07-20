@@ -837,3 +837,159 @@
       font-family:Georgia, "Times New Roman", serif;
       font-size:1.2rem;
     }
+
+/* Treatment pages */
+.treatment-page .lead{
+  max-width:680px;
+  color:var(--muted);
+  font-size:1.16rem;
+}
+
+.treatment-page .hero img{
+  width:100%;
+  height:560px;
+  object-fit:cover;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.surface{
+  background:var(--surface);
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:34px;
+}
+
+.panel{
+  padding:30px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--surface);
+}
+
+.surface .panel{
+  background:var(--bg);
+}
+
+.treatment-page ul{
+  padding-left:22px;
+  color:var(--muted);
+}
+
+.treatment-page li + li{
+  margin-top:10px;
+}
+
+.treatment-page .faq details{
+  padding:18px 0;
+  border-top:1px solid var(--line);
+}
+
+.treatment-page .faq summary{
+  cursor:pointer;
+  font-weight:800;
+}
+
+.treatment-page .faq details:last-child{
+  border-bottom:1px solid var(--line);
+}
+
+.treatments{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.treatments a{
+  min-height:86px;
+  display:flex;
+  align-items:center;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:var(--surface);
+  font-weight:700;
+  transition:border-color .2s ease,color .2s ease,transform .2s ease;
+}
+
+.treatments a:hover{
+  color:var(--accent-dark);
+  border-color:var(--accent);
+  transform:translateY(-2px);
+}
+
+.cta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  padding:42px;
+  border-radius:var(--radius);
+  background:var(--text);
+  color:#fff;
+}
+
+.cta p{
+  margin:0;
+  color:rgba(255,255,255,.78);
+}
+
+.cta h2{
+  margin-bottom:10px;
+  color:#fff;
+}
+
+.cta .btn{
+  background:#fff;
+  color:var(--text);
+  border-color:#fff;
+}
+
+@media (max-width:900px){
+  .grid-2{
+    grid-template-columns:1fr;
+  }
+
+  .treatment-page .hero img{
+    height:420px;
+  }
+
+  .treatments{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .cta{
+    display:block;
+  }
+
+  .cta .btn{
+    margin-top:22px;
+  }
+}
+
+@media (max-width:560px){
+  .treatment-page .hero img{
+    height:340px;
+  }
+
+  .treatments{
+    grid-template-columns:1fr;
+  }
+
+  .panel,
+  .cta{
+    padding:26px;
+  }
+}
+
+/* Home page refinements */
+.section-actions{
+  margin-top:20px;
+}
+
+.treatment-links{
+  margin-top:28px;
+}
